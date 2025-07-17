@@ -1,0 +1,28 @@
+{
+  "name": "risupect",
+  "description": "Risupect: RisuAI Component library for plugins.",
+  "private": false,
+  "version": "0.0.0",
+  "license": "GPL-3.0-only",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^12.1.4",
+    "glob": "^11.0.3",
+    "rollup": "^4.44.2",
+    "rollup-sourcemap-path-transform": "^1.1.0",
+    "tslib": "^2.8.1",
+    "typescript": "~5.8.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": "./dist/*/index.js"
+  }
+}
