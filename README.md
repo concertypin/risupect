@@ -8,16 +8,12 @@ pnpm add risutype
 ```
 
 # Usage
-## Button
-```ts
-import {}
-```
+Check out `example/` directory for usage examples.
 
 # Copyright Notice
 > [!IMPORTANT]
 > Projects created with this must comply with the GPLv3 license, as the original RisuAI repository is licensed under GPLv3.
 > This library incorporates type declarations derived from the original RisuAI repository.
-> If you prefer not to use GPLv3, ensure the `risutype` directory is removed from your project.
 
 
 - `risutype`, created by [Wg7VmsZ6xE](https://arca.live/u/@Wg7VmsZ6xE/54213053), is published on [Proton Drive](https://drive.proton.me/urls/GJV00GJKRC#2RcWtX6XUYoD). Check out `개발자 키트` directory or [original post](https://arca.live/b/characterai/138778511).

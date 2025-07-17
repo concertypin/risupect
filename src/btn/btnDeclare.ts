@@ -17,13 +17,13 @@ type RisuButtonConfig = {
  */
 export abstract class RisuButton<T extends RisuButtonConfig> {
     /** Unique identifier for the button element. */
-    readonly id: string;
+    protected readonly id: string;
 
     /** Button configuration options. */
     options: T;
 
     /** MutationObserver for document changes. */
-    observer: MutationObserver | undefined;
+    protected observer: MutationObserver | undefined;
 
     /**
      * Returns the default configuration options for the button.
