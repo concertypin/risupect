@@ -14,10 +14,10 @@
     "declarationMap": true,
     "outDir": "dist",
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    //"allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
-    "noEmit": true,
+    //"noEmit": true,
     /* Linting */
     "strict": true,
     "noFallthroughCasesInSwitch": true,

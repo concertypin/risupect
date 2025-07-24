@@ -26,5 +26,6 @@ example/pnpm-lock.yaml
 
 # Output
 dist
+
 **/node_modules
 **/dist
