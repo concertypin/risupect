@@ -65,7 +65,7 @@ export class CharacterButton extends RisuButton<CharacterButtonConfig> {
             }
 
             //Whoa, this code works in devtool too.
-            const lastElement = document.querySelector("html body div#app main.flex.bg-bg.w-full.h-full.max-w-100vw.text-textcolor div.setting-area.h-full.flex-col.overflow-y-auto.overflow-x-hidden.bg-darkbg.py-6.text-textcolor.max-h-full.svelte-10trj3t.risu-sidebar.w-96.min-w-96.px-4.flex > :nth-last-child(1)")
+            const lastElement = document.querySelector("div.setting-area > :nth-last-child(1)")
             if (lastElement) {
                 lastElement.after(btn);
             } else {
@@ -74,10 +74,10 @@ export class CharacterButton extends RisuButton<CharacterButtonConfig> {
         }
     }
     private findThisMenu(): CharacterMenuGroup | undefined {
-        const menubar = document.querySelector(`html body div#app main.flex.bg-bg.w-full.h-full.max-w-100vw.text-textcolor div.setting-area.h-full.flex-col.overflow-y-auto.overflow-x-hidden.bg-darkbg.py-6.text-textcolor.max-h-full.svelte-10trj3t.risu-sidebar.w-96.min-w-96.px-4.flex div.flex.mb-2.gap-2`)
+        const menubar = document.querySelector(`div.setting-area div.flex.mb-2.gap-2`)
         if (!menubar) {
             //it might be in devtool
-            if (document.querySelector("html body div#app main.flex.bg-bg.w-full.h-full.max-w-100vw.text-textcolor div.setting-area.h-full.flex-col.overflow-y-auto.overflow-x-hidden.bg-darkbg.py-6.text-textcolor.max-h-full.svelte-10trj3t.risu-sidebar.w-96.min-w-96.px-4.flex"))
+            if (document.querySelector("div.setting-area"))
                 return CharacterMenuGroup.Devtool;
             else
                 return undefined;

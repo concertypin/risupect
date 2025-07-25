@@ -8,7 +8,7 @@ pnpm add risutype
 ```
 
 # Usage
-Check out `example/` directory for usage examples.
+Check out `example/` directory for usage examples. This is super-unstable library, so it is not recommended to use it in production. Breaking changes may happen at any time.
 
 # Copyright Notice
 > [!IMPORTANT]
