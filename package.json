@@ -19,6 +19,14 @@
     "vite": "^7.3.0",
     "vite-plugin-dts": "^4.5.4"
   },
+  "repository": {
+    "url": "https://github.com/concertypin/risupect",
+    "type": "git"
+  },
+  "author": {
+    "name": "concertypin",
+    "url": "https://github.com/concertypin"
+  },
   "engines": {
     "node": ">20"
   },
