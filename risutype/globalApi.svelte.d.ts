@@ -12,15 +12,15 @@
  * @property {string} [chatId] - The chat ID associated with the request.
  */
 export interface GlobalFetchArgs {
-  plainFetchForce?: boolean;
-  plainFetchDeforce?: boolean;
-  body?: any;
-  headers?: { [key: string]: string };
-  rawResponse?: boolean;
-  method?: "POST" | "GET";
-  abortSignal?: AbortSignal;
-  useRisuToken?: boolean;
-  chatId?: string;
+	plainFetchForce?: boolean;
+	plainFetchDeforce?: boolean;
+	body?: any;
+	headers?: { [key: string]: string };
+	rawResponse?: boolean;
+	method?: "POST" | "GET";
+	abortSignal?: AbortSignal;
+	useRisuToken?: boolean;
+	chatId?: string;
 }
 
 /**
@@ -33,10 +33,10 @@ export interface GlobalFetchArgs {
  * @property {number} status - The status returned from the request.
  */
 export interface GlobalFetchResult {
-  ok: boolean;
-  data: any;
-  headers: { [key: string]: string };
-  status: number;
+	ok: boolean;
+	data: any;
+	headers: { [key: string]: string };
+	status: number;
 }
 
 /**
@@ -47,8 +47,8 @@ export interface GlobalFetchResult {
  * @returns {Promise<GlobalFetchResult>} - The result of the fetch request.
  */
 export declare function globalFetch(
-  url: string,
-  arg: GlobalFetchArgs
+	url: string,
+	arg: GlobalFetchArgs,
 ): Promise<GlobalFetchResult>;
 
 /**
@@ -68,13 +68,13 @@ export declare function globalFetch(
  * @throws {Error} - Throws an error if the request is aborted or if there is an error in the response.
  */
 export declare function fetchNative(
-  url: string,
-  arg: {
-    body?: string | Uint8Array | ArrayBuffer;
-    headers?: { [key: string]: string };
-    method?: "POST" | "GET" | "PUT" | "DELETE";
-    signal?: AbortSignal;
-    useRisuTk?: boolean;
-    chatId?: string;
-  }
+	url: string,
+	arg: {
+		body?: string | Uint8Array | ArrayBuffer;
+		headers?: { [key: string]: string };
+		method?: "POST" | "GET" | "PUT" | "DELETE";
+		signal?: AbortSignal;
+		useRisuTk?: boolean;
+		chatId?: string;
+	},
 ): Promise<Response>;

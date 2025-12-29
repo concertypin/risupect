@@ -1,2 +1,3 @@
-import { CharacterButton } from "risupect/btn"
-new CharacterButton("asdf")
+import { CharacterButton } from "risupect/v2/btn";
+
+new CharacterButton("asdf");

@@ -1,2 +1,1 @@
 export * as btn from "./btn";
-export * as v2 from "./v2";

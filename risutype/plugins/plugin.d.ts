@@ -17,17 +17,17 @@ import type { character } from "../storage/database";
  * @property {string} mode - The mode. One of model, submodel, memory, emotion, otherAx, translate.
  */
 export type PluginV2ProviderArgument = {
-  prompt_chat: OpenAIChat[];
-  frequency_penalty: number;
-  min_p: number;
-  presence_penalty: number;
-  repetition_penalty: number;
-  top_k: number;
-  top_p: number;
-  temperature: number;
-  mode: string;
-  max_tokens: number;
-  thinking_tokens: number;
+	prompt_chat: OpenAIChat[];
+	frequency_penalty: number;
+	min_p: number;
+	presence_penalty: number;
+	repetition_penalty: number;
+	top_k: number;
+	top_p: number;
+	temperature: number;
+	mode: string;
+	max_tokens: number;
+	thinking_tokens: number;
 };
 
 /**
@@ -36,8 +36,8 @@ export type PluginV2ProviderArgument = {
  * @property {function (string): number[] | Promise<number[]>} [tokenizerFunc] - The tokenizer function.
  */
 export type PluginV2ProviderOptions = {
-  tokenizer?: string;
-  tokenizerFunc?: (content: string) => number[] | Promise<number[]>;
+	tokenizer?: string;
+	tokenizerFunc?: (content: string) => number[] | Promise<number[]>;
 };
 
 /**
@@ -46,8 +46,8 @@ export type PluginV2ProviderOptions = {
  * @property {string | ReadableStream<String>} content - The provider content.
  */
 export type PluginV2ProviderResult = {
-  success: boolean;
-  content: string | ReadableStream<String>;
+	success: boolean;
+	content: string | ReadableStream<string>;
 };
 
 /**
@@ -56,7 +56,7 @@ export type PluginV2ProviderResult = {
  * @returns {string | null | undefined | Promise<string | null | undefined>} - The handler result. if it is a string or string promise, the data will be replaced with the result.
  */
 export type EditFunction = (
-  content: string
+	content: string,
 ) => string | null | undefined | Promise<string | null | undefined>;
 
 /**
@@ -71,8 +71,8 @@ export type ReplacerType = "beforeRequest" | "afterRequest";
  * @returns {OpenAIChat[] | string | Promise<OpenAIChat[] | string>} - If the type is beforeRequest, the result should be OpenAIChat[]. If the type is afterRequest, the result should be string.
  */
 export type ReplacerFunction = (
-  content: OpenAIChat[] | string,
-  mode: string
+	content: OpenAIChat[] | string,
+	mode: string,
 ) => OpenAIChat[] | string | Promise<OpenAIChat[] | string>;
 
 /**
@@ -124,12 +124,12 @@ export declare function setChar(char: character): void;
  * @param {PluginV2ProviderOptions} [options] - The provider options.
  */
 export declare function addProvider(
-  name: string,
-  func: (
-    arg: PluginV2ProviderArgument,
-    abortSignal?: AbortSignal
-  ) => Promise<PluginV2ProviderResult>,
-  options?: PluginV2ProviderOptions
+	name: string,
+	func: (
+		arg: PluginV2ProviderArgument,
+		abortSignal?: AbortSignal,
+	) => Promise<PluginV2ProviderResult>,
+	options?: PluginV2ProviderOptions,
 ): void;
 
 /**
@@ -138,8 +138,8 @@ export declare function addProvider(
  * @param {EditFunction} func - The handler function.
  */
 export declare function addRisuScriptHandler(
-  type: ScriptMode,
-  func: EditFunction
+	type: ScriptMode,
+	func: EditFunction,
 ): void;
 
 /**
@@ -148,8 +148,8 @@ export declare function addRisuScriptHandler(
  * @param {EditFunction} func - The handler function.
  */
 export declare function removeRisuScriptHandler(
-  type: ScriptMode,
-  func: EditFunction
+	type: ScriptMode,
+	func: EditFunction,
 ): void;
 
 /**
@@ -158,8 +158,8 @@ export declare function removeRisuScriptHandler(
  * @param {ReplacerFunction} func - The replacer function. vary depending on the type.
  */
 export declare function addRisuReplacer(
-  type: ReplacerType,
-  func: ReplacerFunction
+	type: ReplacerType,
+	func: ReplacerFunction,
 ): void;
 
 /**
@@ -168,8 +168,8 @@ export declare function addRisuReplacer(
  * @param {ReplacerFunction} func - The replacer function. vary depending on the type.
  */
 export declare function removeRisuReplacer(
-  type: ReplacerType,
-  func: ReplacerFunction
+	type: ReplacerType,
+	func: ReplacerFunction,
 ): void;
 
 /**
